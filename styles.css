@@ -1,168 +1,142 @@
+:root {
+  --black: #000000;
+  --silver: #bfc7cf;
+  --muted: #9aa1a9;
+  --bg-dark: #0b0b0b;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
+  height: 100%;
 }
-.navbar {
-    background-color: #000 !important;
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  color: #3b3b3e;
+  background: #f5f6f8;
+  margin: 0;
 }
-.hero {
-    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-    color: white;
-    padding: 120px 0 80px 0;
-    position: relative;
-    border-radius: 0 0 2rem 2rem;
-    overflow: hidden;
+
+/* Header */
+#siteHeader {
+  transition: all 0.35s ease;
 }
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('https://images.samsung.com/is/image/samsung/p6pim/in/2401/gallery/in-galaxy-s24-ultra-s928-sm-s928bztqins-thumb-539573666?$172_172_PNG$') no-repeat center center;
-    background-size: cover;
-    opacity: 0.07;
-    z-index: 0;
+#siteHeader.bg-black {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.98),
+    rgba(10, 10, 10, 0.95)
+  );
 }
-.hero .container {
-    position: relative;
-    z-index: 1;
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9);
 }
-#heroCarousel {
-    max-width: 400px;
-    margin: 0 auto;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.15);
-    border-radius: 1.5rem;
-    overflow: hidden;
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--silver);
 }
-/* === Carousel Images Fill Container === */
-#heroCarousel .carousel-inner {
-    min-height: 320px;
+.navbar-brand img {
+  object-fit: cover;
 }
-#heroCarousel .carousel-inner img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    background: #f5f5f5;
-    border-radius: 1.5rem;
+
+/* HERO */
+.hero-section {
+  position: relative;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(180deg, #0b0b0b 0%, rgba(11, 11, 11, 0.85) 60%);
+  overflow: hidden;
 }
-#heroCarousel .carousel-indicators [data-bs-target] {
-    background-color: rgba(255,255,255,0.75);
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(11, 11, 11, 0.5), transparent 30%);
 }
-/* === Equal Heights for Feature Cards === */
-.feature-card {
-    border: none;
-    box-shadow: 0 6px 32px rgba(0,0,0,0.11);
-    transition: transform 0.3s, box-shadow 0.3s;
-    border-radius: 1.25rem;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    height: 100%;
-    min-height: 340px;
+.display-5 {
+  color: #ffffff;
 }
-.feature-card .card-body {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.text-light-50 {
+  color: rgba(255, 255, 255, 0.85);
 }
-.feature-card:hover {
-    transform: translateY(-7px) scale(1.025);
-    box-shadow: 0 12px 36px rgba(0,123,255,0.13);
+.mockup-wrap {
+  display: flex;
+  justify-content: center;
 }
-.spec-table {
-    background-color: white;
-    border-radius: 1.1rem;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+.mockup {
+  max-width: 420px;
+  transform: translateY(-6px);
 }
-.cta-section {
-    background: linear-gradient(90deg,#007bff 40%, #0056b3 100%);
-    color: white;
-    padding: 64px 0;
-    border-radius: 2rem;
+
+/* Features */
+.icon-box {
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #2b2b2b, #161616);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
-.cta-section .btn-lg {
-    box-shadow: 0 4px 24px rgba(0, 123, 255, 0.14);
-    font-weight: 600;
-    padding: 1rem 2.6rem;
-    font-size: 1.25rem;
-    border-radius: 2rem;
-    letter-spacing: 0.02em;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+.card {
+  border-radius: 12px;
 }
-.cta-section .btn-lg:hover {
-    background: #004080;
-    color: #fff;
+
+/* About / sections */
+.section-title {
+  color: #0f1724;
 }
-.badge-custom {
-    background-color: #007bff;
-    color: white;
-    border-radius: 1rem;
-    font-weight: 500;
-    letter-spacing: 0.02em;
+.bg-light {
+  background: #f8fafc;
 }
-.footer {
-    background-color: #000;
-    color: white;
-    border-radius: 2rem 2rem 0 0;
+
+/* CTA and Footer */
+.bg-black {
+  background: #030303;
 }
-.display-3, h1, h2, h3, h4, h5 {
-    font-weight: 700 !important;
-    letter-spacing: -0.5px;
+footer {
+  background: #050506;
 }
-.card-title {
-    font-weight: 600;
-    margin-top: 0.7rem;
+
+/* Carousel sliding effect */
+#heroCarousel .carousel-item {
+  transition: transform 0.8s ease-in-out;
 }
-.card-text {
-    color: #444;
-    font-weight: 400;
-}
-blockquote-footer {
-    color: #888;
-    font-size: 0.98rem;
-}
+
+/* Responsive tweaks */
 @media (max-width: 991px) {
-    html { font-size: 15px; }
-    .hero { padding: 72px 0 44px 0; }
+  .hero-section {
+    padding-top: 5rem;
+  }
+  .mockup {
+    max-width: 320px;
+  }
 }
-@media (max-width: 767px) {
-    html { font-size: 14px; }
-    .hero { padding: 48px 0 24px 0; }
-    .display-3 { font-size: 2.1rem; }
-    .lead { font-size: 1.13rem; }
-    .spec-table { font-size: 0.98rem; }
-    .cta-section { padding: 40px 0; }
-    .container, .spec-table, .cta-section .container {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    }
+
+@media (max-width: 575px) {
+  .navbar-brand .d-none {
+    display: none !important;
+  }
+  .hero-section {
+    padding-top: 4rem;
+  }
 }
-/* Stack cards on mobile */
-@media (max-width: 767px) {
-    .feature-card, .col-lg-4, .col-md-6 {
-        margin-bottom: 24px;
-        width: 100%;
-        display: block;
-    }
-    .feature-card:last-child { margin-bottom: 0; }
+
+/* Accessibility focus */
+a:focus {
+  outline: 3px solid rgba(189, 197, 206, 0.18);
+  outline-offset: 2px;
 }
-/* Carousel & card tune-up on mobile */
-@media (max-width: 576px) {
-    #heroCarousel .carousel-inner,
-    #heroCarousel .carousel-inner img {
-        height: 220px;
-    }
-    .feature-card {
-        min-height: 280px;
-    }
-    #heroCarousel { max-width: 100%; }
-    .container, .spec-table, .cta-section .container {
-        padding-left: 0.65rem !important;
-        padding-right: 0.65rem !important;
-    }
+
+/* small utilities */
+.text-muted {
+  color: var(--muted) !important;
+}
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.06);
 }
