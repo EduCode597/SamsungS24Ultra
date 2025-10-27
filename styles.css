@@ -102,7 +102,24 @@ footer {
 
 /* Carousel sliding effect */
 #heroCarousel .carousel-item {
-  transition: transform 0.8s ease-in-out;
+    transition: transform 0.8s ease-in-out;
+}
+
+/* Responsive carousel */
+@media (max-width: 767px) {
+    #heroCarousel .carousel-inner img {
+        height: 250px !important;
+    }
+    #heroCarousel .carousel-caption {
+        display: block !important; /* Show captions on mobile too */
+        bottom: 10px;
+    }
+    #heroCarousel .carousel-caption h5 {
+        font-size: 1rem;
+    }
+    #heroCarousel .carousel-caption p {
+        font-size: 0.8rem;
+    }
 }
 
 /* Responsive tweaks */
