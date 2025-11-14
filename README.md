@@ -31,14 +31,14 @@ Visit the live website: [https://educode597.github.io/SamsungS24Ultra/](https://
 
 ## 📁 Project Structure
 SamsungS24Ultra/
-├── index.html # Main HTML file
+├── index.html
 ├── styles/
-│ └── style.css # Custom stylesheet
+│   └── style.css
 ├── images/
-│ └── [image files] # Product images and assets
+│   └── [image files]
 ├── js/
-│ └── script.js # JavaScript functionality
-├── README.md # Project documentation
+│   └── script.js
+├── README.md
 └── (Bootstrap CDN included)
 
 
@@ -50,11 +50,11 @@ To run this project locally:
    ```bash
    git clone https://github.com/educode597/SamsungS24Ultra.git
 
-2. Navigate to the project directory
+2. **Navigate to the project directory**
+   ```bash
    cd SamsungS24Ultra
-
+   
 3. Open in your browser
-
 - Simply open index.html in your web browser
 - No build process required!
 
