@@ -30,6 +30,7 @@ Visit the live website: [https://educode597.github.io/SamsungS24Ultra/](https://
 - **Deployment**: GitHub Pages
 
 ## 📁 Project Structure
+
 SamsungS24Ultra/
 ├── index.html
 ├── styles/
@@ -41,24 +42,27 @@ SamsungS24Ultra/
 ├── README.md
 └── (Bootstrap CDN included)
 
-
 ## 🚀 Quick Start
 
 To run this project locally:
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/educode597/SamsungS24Ultra.git
 
 2. **Navigate to the project directory**
+
    ```bash
    cd SamsungS24Ultra
    
 3. Open in your browser
+
 - Simply open index.html in your web browser
 - No build process required!
 
 🎯 Key Sections
+
 - Hero Banner: Eye-catching introduction with Bootstrap carousel/jumbotron
 - Design & Display: Responsive grid layout showcasing device features
 - Camera System: Bootstrap cards highlighting photography capabilities
@@ -67,6 +71,7 @@ To run this project locally:
 - Accessories: Grid layout for compatible products
 
 🌟 Highlights
+
 - 200MP Camera: Professional-grade photography system
 - Titanium Frame: Premium build quality and durability
 - S Pen Integration: Enhanced productivity features
@@ -74,6 +79,7 @@ To run this project locally:
 - All-day Battery: Long-lasting power with fast charging
 
 🔧 Bootstrap Features Used
+
 - Responsive grid system
 - Navigation components
 - Card layouts
@@ -84,6 +90,7 @@ To run this project locally:
 - Responsive breakpoints
 
 🤝 Contributing
+
 - Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 - Fork the project
 - Create your feature branch (git checkout -b feature/AmazingFeature)
@@ -92,11 +99,12 @@ To run this project locally:
 - Open a Pull Request
 
 📄 License
+
 - This project is licensed under the MIT License.
 
 📞 Contact
 GitHub: @educode597
-Project Link: https://github.com/educode597/SamsungS24Ultra
+Project Link: <https://github.com/educode597/SamsungS24Ultra>
 
 🙏 Acknowledgments
 Samsung Electronics for product inspiration
