@@ -1,0 +1,127 @@
+/* ==========================================================================
+   3. Page Sections, Responsive Collapse & Motion Guardrails (styles/sections.css)
+   ========================================================================== */
+
+/* Hero Layout (.hero-editorial) */
+.hero-editorial {
+  min-height: calc(100dvh - 70px);
+  border-bottom: var(--border-width-grid) solid var(--border-grid);
+  display: flex;
+  align-items: center;
+}
+
+.hero-left-col {
+  padding-block: 3.5rem;
+  padding-inline-end: 2.5rem;
+  border-inline-end: var(--border-width-grid) solid var(--border-grid);
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 4.4vw, 3.85rem);
+  font-weight: 700;
+  line-height: 1.03;
+  margin-block: 1rem;
+}
+
+.hero-lead {
+  font-size: 1.06rem;
+  color: var(--fg-muted);
+  max-width: 52ch;
+  margin-block-end: 1.75rem;
+}
+
+/* Section Wrappers */
+.specs-section {
+  background-color: var(--bg-2);
+  border-block: var(--border-width-grid) solid var(--border-grid);
+}
+
+.about-img-frame {
+  background-color: var(--bg-1);
+  border: var(--border-width-grid) solid var(--border-grid);
+  border-radius: var(--radius-sharp);
+  padding: 0.75rem;
+}
+
+.about-image {
+  max-height: 360px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-inner);
+}
+
+.reviews-section {
+  border-top: var(--border-width-grid) solid var(--border-grid);
+}
+
+.cta-editorial {
+  background-color: var(--bg-inverse);
+  color: var(--fg-inverse);
+  border-top: var(--border-width-grid) solid var(--border-grid);
+}
+
+.footer-editorial {
+  background-color: #090a0c;
+  color: #9ca3af;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-editorial a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.footer-editorial a:hover {
+  color: #ffffff;
+}
+
+/* Responsive Collapse (< 991px and < 767px) */
+@media (max-width: 991px) {
+  .hero-left-col {
+    border-inline-end: 0;
+    border-bottom: var(--border-width-grid) solid var(--border-grid);
+    padding-inline-end: 0;
+    padding-block: 2.5rem;
+  }
+
+  .inspector-img-wrap img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 767px) {
+  .inspector-toolbar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inspector-tab:nth-child(1),
+  .inspector-tab:nth-child(2) {
+    border-bottom: 1px solid var(--border-grid);
+  }
+
+  .gallery-carousel-img {
+    height: 240px;
+  }
+
+  .inspector-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Reduced Motion Guardrail (Mandatory) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

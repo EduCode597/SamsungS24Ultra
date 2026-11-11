@@ -1,0 +1,227 @@
+/* ==========================================================================
+   3. Editorial Swiss Cards & Inspector (styles/components.css)
+   Hardware Inspector, Swiss Bento Cards, Gallery, Spec Clusters, Quote Cards
+   ========================================================================== */
+
+/* Hardware Angle Inspector (.inspector-frame) */
+.inspector-frame {
+  --inspector-bg: var(--bg-1);
+  --inspector-chrome: var(--bg-2);
+  --inspector-border: var(--border-grid);
+
+  background-color: var(--inspector-bg);
+  border: var(--border-width-grid) solid var(--inspector-border);
+  border-radius: var(--radius-sharp);
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(17, 18, 21, 0.08);
+}
+
+.inspector-toolbar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: var(--inspector-chrome);
+  border-bottom: var(--border-width-grid) solid var(--inspector-border);
+}
+
+.inspector-tab {
+  border: 0;
+  border-inline-end: 1px solid var(--inspector-border);
+  background: transparent;
+  color: var(--fg-body);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.68rem 0.4rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.inspector-tab:last-child {
+  border-inline-end: 0;
+}
+
+.inspector-tab:hover {
+  background-color: var(--theme-accent-subtle);
+}
+
+.inspector-tab.active {
+  background-color: var(--theme-accent);
+  color: var(--theme-accent-fg);
+}
+
+.inspector-img-wrap {
+  padding: 1.25rem;
+  background-color: var(--inspector-bg);
+  text-align: center;
+}
+
+.inspector-img-wrap img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: var(--radius-inner);
+  border: 1px solid var(--border-subtle);
+  transition: opacity 0.2s ease;
+}
+
+.inspector-footer {
+  padding: 0.78rem 1.1rem;
+  background-color: var(--inspector-chrome);
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.74rem;
+}
+
+/* Swiss Bento Cards (.swiss-bento-card) & Gallery */
+.swiss-bento-card {
+  --bento-bg: var(--bg-1);
+  --bento-border: var(--border-grid);
+
+  background-color: var(--bento-bg);
+  border: var(--border-width-grid) solid var(--bento-border);
+  border-radius: var(--radius-sharp);
+  padding: 1.65rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.swiss-bento-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--theme-accent);
+}
+
+.swiss-bento-card.bento-tinted {
+  background-color: var(--bg-2);
+}
+
+.swiss-stat {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--theme-accent);
+  line-height: 1;
+  margin-block-end: 0.6rem;
+}
+
+.gallery-frame {
+  background-color: var(--bg-1);
+  border: var(--border-width-grid) solid var(--border-grid);
+  border-radius: var(--radius-sharp);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gallery-header {
+  background-color: var(--bg-2);
+  padding: 0.85rem 1.25rem;
+  border-bottom: var(--border-width-grid) solid var(--border-grid);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gallery-carousel-img {
+  height: 340px;
+  object-fit: cover;
+}
+
+/* Spec Clusters (.spec-cluster) & Filter Pills */
+.spec-filter-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.spec-filter-btn {
+  background-color: var(--bg-1);
+  color: var(--fg-body);
+  border: var(--border-width-grid) solid var(--border-grid);
+  border-radius: var(--radius-sharp);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.spec-filter-btn.active,
+.spec-filter-btn:hover {
+  background-color: var(--theme-accent);
+  border-color: var(--theme-accent);
+  color: var(--theme-accent-fg);
+}
+
+.spec-cluster {
+  --spec-cluster-bg: var(--bg-1);
+  --spec-cluster-header-bg: var(--bg-2);
+
+  background-color: var(--spec-cluster-bg);
+  border: var(--border-width-grid) solid var(--border-grid);
+  border-radius: var(--radius-sharp);
+  height: 100%;
+  overflow: hidden;
+}
+
+.spec-cluster-header {
+  background-color: var(--spec-cluster-header-bg);
+  padding: 0.9rem 1.25rem;
+  border-bottom: var(--border-width-grid) solid var(--border-grid);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spec-item {
+  padding: 1.05rem 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.spec-item:last-child {
+  border-bottom: 0;
+}
+
+.spec-key {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.spec-val {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: var(--fg-body);
+  margin-block: 0.15rem;
+}
+
+/* Quote Cards (.editorial-quote-card) */
+.editorial-quote-card {
+  --quote-card-bg: var(--bg-1);
+
+  background-color: var(--quote-card-bg);
+  border: var(--border-width-grid) solid var(--border-grid);
+  border-radius: var(--radius-sharp);
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

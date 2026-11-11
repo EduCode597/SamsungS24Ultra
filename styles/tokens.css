@@ -1,0 +1,119 @@
+/* ==========================================================================
+   1. Tokens & Base Typography (styles/tokens.css)
+   Bootstrap Semantic Token Pipeline & Light/Dark Mode Definitions
+   ========================================================================== */
+
+:root,
+[data-bs-theme="light"] {
+  color-scheme: light;
+
+  /* Layer 1: Base & Surface Tokens */
+  --bg-body: #f4f3ef;
+  --bg-1: #ffffff;
+  --bg-2: #eae8e1;
+  --bg-inverse: #111215;
+
+  /* Layer 2: Foreground Tokens */
+  --fg-body: #111215;
+  --fg-muted: #525866;
+  --fg-inverse: #f4f3ef;
+
+  /* Layer 3: Structural Grid & Border Tokens */
+  --border-grid: #111215;
+  --border-subtle: rgba(17, 18, 21, 0.16);
+  --border-width-grid: 1.5px;
+
+  /* Layer 4: Locked Single Accent Token (Cobalt Technical) */
+  --theme-accent: #1d4ed8;
+  --theme-accent-fg: #ffffff;
+  --theme-accent-subtle: rgba(29, 78, 216, 0.1);
+  --focus-ring-color: rgba(29, 78, 216, 0.35);
+
+  /* Layer 5: Locked Shape Scale */
+  --radius-sharp: 6px;
+  --radius-inner: 4px;
+
+  /* Bootstrap Runtime Token Bridges */
+  --bs-body-bg: var(--bg-body);
+  --bs-body-color: var(--fg-body);
+  --bs-border-color: var(--border-subtle);
+  --bs-primary: var(--theme-accent);
+}
+
+[data-bs-theme="dark"] {
+  color-scheme: dark;
+
+  --bg-body: #0d0e11;
+  --bg-1: #15171c;
+  --bg-2: #1d2026;
+  --bg-inverse: #090a0c;
+
+  --fg-body: #f4f3ef;
+  --fg-muted: #9ca3af;
+  --fg-inverse: #f4f3ef;
+
+  --border-grid: #3f4451;
+  --border-subtle: rgba(244, 243, 239, 0.14);
+
+  --theme-accent: #3b82f6;
+  --theme-accent-fg: #ffffff;
+  --theme-accent-subtle: rgba(59, 130, 246, 0.16);
+  --focus-ring-color: rgba(59, 130, 246, 0.45);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+header[id],
+section[id] {
+  scroll-margin-top: 70px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-body);
+  color: var(--fg-body);
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.editorial-heading {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  letter-spacing: -0.03em;
+  color: var(--fg-body);
+}
+
+.mono-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.text-editorial-muted {
+  color: var(--fg-muted);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--focus-ring-color);
+  outline-offset: 2px;
+}
+
