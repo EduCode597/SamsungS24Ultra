@@ -70,6 +70,12 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+header[id],
+section[id] {
+  scroll-margin-top: 70px;
 }
 
 body {
@@ -354,6 +360,52 @@ button:focus-visible {
   gap: 0.75rem;
   font-family: "JetBrains Mono", monospace;
   font-size: 0.74rem;
+}
+
+/* Hero Scroll-Down Discovery Button */
+.hero-scroll-wrap {
+  display: flex;
+  justify-content: center;
+  padding-block: 1rem 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.hero-scroll-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.42rem 0.9rem;
+  background-color: var(--bg-1);
+  color: var(--fg-body);
+  border: var(--border-width-grid) solid var(--border-grid);
+  border-radius: var(--radius-sharp);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.15s ease;
+}
+
+.hero-scroll-btn:hover {
+  background-color: var(--theme-accent);
+  border-color: var(--theme-accent);
+  color: var(--theme-accent-fg);
+  transform: translateY(2px);
+}
+
+.hero-scroll-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.hero-scroll-icon {
+  display: inline-block;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-scroll-btn:hover .hero-scroll-icon {
+  transform: translateY(2px);
 }
 
 /* ==========================================================================
